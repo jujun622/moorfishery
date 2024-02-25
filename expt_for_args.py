@@ -162,10 +162,10 @@ if __name__ == "__main__":
                        'runs': args.runs, 'simlen': args.simlen, 'despot_t': args.despot_t,
                        'discretisation_size': args.dis_size,
                        'PopulationSize': args.populationsize, 'gen_method': args.gen_method,
-                       'GenerationTime': args.generationtime, 'p_c': args.p_c, 'p_m': args.p_m,
+                       'GenerationTime': args.generationtime, 
                        'l2_lambda': args.l2_lambda, 'num_epochs_rnn': args.num_epochs_rnn}
 
-    # despot = args.despot
+    despot = args.despot
     reset_world_mode = args.reset_world_mode
     m = args.m
 

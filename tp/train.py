@@ -122,13 +122,11 @@ def expt(model_params_list, hyperparameters, path, despot, reset_world_mode='uni
 
         PopulationSize = hyperparameters['PopulationSize']
         GenerationTime = hyperparameters['GenerationTime']
-        p_c = hyperparameters['p_c']
-        p_m = hyperparameters['p_m']
         gen_method = hyperparameters['gen_method']
         random_state = random_state
 
         thresholds = train_policy(model=model, seed=seed, MaxTry=MaxTry, UpdateTime=UpdateTime,
-                                  PopulationSize=PopulationSize, GenerationTime=GenerationTime, p_c=p_c, p_m=p_m,
+                                  PopulationSize=PopulationSize, GenerationTime=GenerationTime, 
                                   gen_method=gen_method, reset_mode='uniform', random_state=42)
 
         policies.append(POMDPThresholdPolicy(model.A, thresholds, model.K))
